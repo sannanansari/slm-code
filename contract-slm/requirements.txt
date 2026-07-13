@@ -1,0 +1,32 @@
+# ContractSLM-3B — Requirements
+# Python 3.10+  |  CUDA 12.1+  |  16GB VRAM minimum (A100 recommended)
+# Free Colab A100: Runtime → Change runtime type → A100 GPU
+
+# Core training stack
+torch>=2.2.0
+transformers>=4.44.0
+datasets>=2.18.0
+accelerate>=0.27.0
+peft>=0.10.0
+trl>=0.8.1
+bitsandbytes>=0.43.0
+
+# HuggingFace upload
+huggingface_hub>=0.22.0
+
+# File reading (for inference on real contracts)
+pdfplumber>=0.10.0          # PDF reading
+python-docx>=1.1.0          # DOCX reading
+
+# REST API server (optional)
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.0.0
+python-multipart>=0.0.9     # file upload support
+
+# Evaluation
+tqdm>=4.66.0
+scikit-learn>=1.4.0
+
+# Notebooks
+jupyter>=1.0.0
